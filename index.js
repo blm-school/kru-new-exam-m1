@@ -1,5 +1,5 @@
 // URL ที่ได้จากขั้นตอน Deployment ใน Apps Script
-const API_URL = "https://script.google.com/macros/s/AKfycbwodium0NLefm5fqW9YDuJMVgcNk8g2pEMHpqlbd5-siqvYp9s_hdKY6GchejiR6Yc6OQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbziOfcO-5NgGl1aJ8a5NpUXQ0TQm-jP9sOsFJceEq3NuBTDsCknX7J4_HHR9ltLGhtq8g/exec";
 
 let TEACHER_PASSWORD = ""; // 🔑 รหัสผ่านสำหรับครู จะถูกเติมจาก Sheet
 let FORM_LINK = "";        // จะถูกเติมจาก Sheet
@@ -118,3 +118,4 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
