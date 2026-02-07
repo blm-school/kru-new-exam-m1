@@ -43,7 +43,7 @@ initExam();
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     // ดึงค่าล่าสุดจาก localStorage มาบวกเพิ่ม
-    let count = parseInt(localStorage.getItem("awayCount") || 0);
+    let count = parseInt(localStorage.getItem("awayCount") || -1);
     count++;
     localStorage.setItem("awayCount", count);
     displayCount.innerText = count;
@@ -110,5 +110,6 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
 
 
