@@ -27,7 +27,7 @@ async function initExam() {
         displayCount.innerText = currentCount;
 
         if (isLocked === "true") {
-            showLock();
+            if(awayCount > 0){showLock()}               
         }
 
     } catch (error) {
@@ -109,6 +109,7 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
 
 
 
