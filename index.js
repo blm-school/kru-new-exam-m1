@@ -23,7 +23,7 @@ async function initExam() {
 
         // --- เช็คสถานะการล็อกต่อทันทีที่ได้รหัสผ่าน ---
         const isLocked = localStorage.getItem("isLocked");
-        const currentCount = localStorage.getItem("awayCount") || -1;
+        const currentCount = localStorage.getItem("awayCount") || 0;
         displayCount.innerText = currentCount;
 
         if (isLocked === "true") {
@@ -79,6 +79,7 @@ function resetExamStatus() {
       localStorage.removeItem("awayCount");
       alert("ล้างข้อมูลเรียบร้อย");
       window.location.reload();
+      localStorage.getItem("awayCount") || 0;
     }
   } else if (pass !== null) {
     alert("รหัสไม่ถูกต้อง!");
@@ -109,4 +110,5 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
 
