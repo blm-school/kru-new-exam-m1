@@ -79,7 +79,6 @@ function resetExamStatus() {
       localStorage.removeItem("awayCount");
       alert("ล้างข้อมูลเรียบร้อย");
       window.location.reload();
-      localStorage.getItem("awayCount") || 0;
     }
   } else if (pass !== null) {
     alert("รหัสไม่ถูกต้อง!");
@@ -110,6 +109,7 @@ document.addEventListener("keydown", (e) => {
     alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
   }
 });
+
 
 
 
