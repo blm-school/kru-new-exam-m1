@@ -86,3 +86,26 @@ function resetExamStatus() {
 }
 
 // ... ส่วนของ EventListener ห้าม Copy (เหมือนเดิมที่คุณเขียนไว้) ...
+// ห้ามคลิกขวา/ค้างเพื่อ Copy
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+// ห้าม Copy เนื้อหาข้อสอบ:
+document.addEventListener("copy", (e) => {
+  e.preventDefault();
+  alert("ไม่อนุญาตให้คัดลอกข้อสอบครับ");
+});
+
+// ห้ามกดปุ่ม Ctrl+C, Ctrl+V, Ctrl+U (ดู Code)
+document.addEventListener("keydown", (e) => {
+  if (
+    e.ctrlKey &&
+    (e.key === "c" ||
+      e.key === "v" ||
+      e.key === "u" ||
+      e.key === "s" ||
+      e.key === "x")
+  ) {
+    e.preventDefault();
+    alert("ไม่อนุญาตให้ใช้คีย์ลัดครับ");
+  }
+});
